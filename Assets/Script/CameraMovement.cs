@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (!pause.isPause)
         {
-            transform.Translate(Vector3.right * speed);
+            transform.Translate(Vector2.right * speed);
         }
         
     }
