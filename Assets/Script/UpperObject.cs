@@ -8,7 +8,8 @@ public class UpperObject : MonoBehaviour
     public EscQuit pause;
     private float speed = 0.1f;
     private bool isOnFloor = true;
-    public GameObject floor;
+    public GameObject upperFloor;
+    public GameObject lowerFloor;
     Rigidbody2D rigidbody;
     //¡¶¥Û–°
     public float force;
@@ -29,6 +30,12 @@ public class UpperObject : MonoBehaviour
                 Jump();
                 isOnFloor = false;
             }
+            if(Input.GetKeyDown(KeyCode.Space))
+            {
+                rigidbody.gravityScale = -rigidbody.gravityScale;
+                force = -force;
+                isOnFloor = false;
+            }
         }
 
 
@@ -36,7 +43,11 @@ public class UpperObject : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject == floor)
+        if (collision.gameObject == upperFloor)
+        {
+            isOnFloor = true;
+        }
+        if (collision.gameObject == lowerFloor)
         {
             isOnFloor = true;
         }
