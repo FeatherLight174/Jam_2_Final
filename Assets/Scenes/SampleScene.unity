@@ -628,7 +628,7 @@ GameObject:
   - component: {fileID: 881195503}
   - component: {fileID: 881195506}
   - component: {fileID: 881195507}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: LowerObject(test)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -648,7 +648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 401955969}
-  floor: {fileID: 839185006}
+  upperFloor: {fileID: 1625586271}
+  lowerFloor: {fileID: 839185006}
   force: 20000
 --- !u!212 &881195504
 SpriteRenderer:
@@ -1596,7 +1597,7 @@ GameObject:
   - component: {fileID: 2069937680}
   - component: {fileID: 2069937679}
   - component: {fileID: 2069937678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: UpperObject(test)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1694,7 +1695,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 1
   m_Constraints: 0
 --- !u!61 &2069937679
@@ -1755,7 +1756,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pause: {fileID: 401955969}
-  floor: {fileID: 1625586271}
+  upperFloor: {fileID: 1625586271}
+  lowerFloor: {fileID: 839185006}
   force: 20000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
