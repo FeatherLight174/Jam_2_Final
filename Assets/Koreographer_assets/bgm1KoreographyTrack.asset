@@ -12,8 +12,24 @@ MonoBehaviour:
   m_Script: {fileID: -1223223985, guid: aa81bbec85a3f423193272a7c6154986, type: 3}
   m_Name: bgm1KoreographyTrack
   m_EditorClassIdentifier: 
-  mEventID: 
-  mEventList: []
+  mEventID: TestEventID
+  mEventList:
+  - mStartSample: 507400
+    mEndSample: 507400
+  - mStartSample: 566200
+    mEndSample: 566200
+  - mStartSample: 625000
+    mEndSample: 625000
+  - mStartSample: 683800
+    mEndSample: 683800
+  - mStartSample: 742600
+    mEndSample: 742600
+  - mStartSample: 801400
+    mEndSample: 801400
+  - mStartSample: 860200
+    mEndSample: 860200
+  - mStartSample: 919000
+    mEndSample: 919000
   _SerializedPayloadTypes: []
   _ColorPayloads: []
   _ColorPayloadIdxs: 
