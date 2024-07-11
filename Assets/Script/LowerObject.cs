@@ -43,6 +43,7 @@ public class Control : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // 现更新为Tilemap地板
         if (collision.gameObject == upperFloor)
         {
             isOnFloor = true;
