@@ -4,22 +4,22 @@
 //----------------------------------------------
 
 using UnityEngine;
-
+using UnityEngine.UI;
 namespace SonicBloom.Koreo.Demos
 {
-	[RequireComponent(typeof(GUIText))]
+	[RequireComponent(typeof(Text))]
 	[AddComponentMenu("Koreographer/Demos/UI Message Setter")]
 	public class UIMessageSetter : MonoBehaviour
 	{
 		[EventID]
 		public string eventID;
 
-		GUIText guiTextCom;
+		Text guiTextCom;
 		KoreographyEvent curTextEvent;
 		
 		void Start()
 		{
-			guiTextCom = GetComponent<GUIText>();
+			guiTextCom = GetComponent<Text>();
 
 			// Register for Koreography Events.  This sets up the callback.
 			Koreographer.Instance.RegisterForEventsWithTime(eventID, UpdateText);
