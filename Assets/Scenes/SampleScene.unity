@@ -732,7 +732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.003921569}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4326,7 +4326,7 @@ MonoBehaviour:
   speed: 300
   upperFloor: {fileID: 459333826}
   lowerFloor: {fileID: 1788321947}
-  force: 22000
+  force: 25000
 --- !u!212 &881195504
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4388,8 +4388,8 @@ Transform:
   m_GameObject: {fileID: 881195502}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -135, z: -2.6521778}
-  m_LocalScale: {x: 30, y: 30, z: 0}
+  m_LocalPosition: {x: -117, y: -135, z: -2.6521778}
+  m_LocalScale: {x: 15, y: 15, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1330435443}
@@ -4603,7 +4603,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 721c6056c4a8a1844892babbc5a53525, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 22000
+  force: 25000
   pause: {fileID: 401955969}
   eventID: TrackTest
 --- !u!1 &928811039
@@ -8930,7 +8930,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1495950511
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14708,8 +14708,8 @@ Transform:
   m_GameObject: {fileID: 2069937675}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 135, z: -2.6521778}
-  m_LocalScale: {x: 30, y: 30, z: 1}
+  m_LocalPosition: {x: -117, y: 135, z: -2.6521778}
+  m_LocalScale: {x: 15, y: 15, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1330435443}
@@ -14854,7 +14854,7 @@ MonoBehaviour:
   speed: 300
   upperFloor: {fileID: 459333826}
   lowerFloor: {fileID: 1788321947}
-  force: 22000
+  force: 30000
 --- !u!114 &2069937681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14867,7 +14867,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f8ea1210594350408528d35af7f047c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  force: 22000
+  force: 25000
   pause: {fileID: 401955969}
   eventID: TrackTest
 --- !u!1660057539 &9223372036854775807
