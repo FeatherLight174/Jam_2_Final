@@ -24,6 +24,8 @@ public class LowerObjectAutoJump : MonoBehaviour
 
     void AutoJump(KoreographyEvent koreographyEvent)
     {
+       
         rigidbody.AddForce(Vector2.up * force);
+        Debug.Log(gameObject.transform.position.x); 
     }
 }
