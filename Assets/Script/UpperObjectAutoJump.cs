@@ -26,11 +26,15 @@ public class UpperObjectAutoJump : MonoBehaviour
         if ((int)koreographyEvent.GetIntValue() == 1)
         {
             rigidbody.AddForce(Vector2.down * force);
+            print("1:");
+            Debug.Log(gameObject.transform.position.x);
         }
         if ((int)koreographyEvent.GetIntValue() == 2)
         {
             rigidbody.gravityScale = -rigidbody.gravityScale;
             force = -force;
+            print("2:");
+            Debug.Log(gameObject.transform.position.x);
         }
 
 
