@@ -23,8 +23,8 @@ MonoBehaviour:
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   - sectionName: New Section
-    startSample: 0
-    samplesPerBeat: 22050
+    startSample: 70666
+    samplesPerBeat: 17640
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   mTracks:
