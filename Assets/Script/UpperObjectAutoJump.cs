@@ -19,10 +19,20 @@ public class UpperObjectAutoJump : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
     void AutoJump(KoreographyEvent koreographyEvent)
     {
-        rigidbody.AddForce(Vector2.up * force);
+        if ((int)koreographyEvent.GetIntValue() == 1)
+        {
+            rigidbody.AddForce(Vector2.down * force);
+        }
+        if ((int)koreographyEvent.GetIntValue() == 2)
+        {
+            rigidbody.gravityScale = -rigidbody.gravityScale;
+            force = -force;
+        }
+
+
     }
 }
