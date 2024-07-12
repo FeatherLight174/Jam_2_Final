@@ -6,7 +6,7 @@ public class CameraMovement : MonoBehaviour
 {
     public GameObject target;
     public EscQuit pause;
-    private float speed = 0.1f;
+    public float speed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +18,7 @@ public class CameraMovement : MonoBehaviour
     {
         if (!pause.isPause)
         {
-            transform.Translate(Vector2.right * speed);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
         }
         
     }

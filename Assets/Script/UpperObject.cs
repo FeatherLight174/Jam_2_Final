@@ -6,7 +6,8 @@ public class UpperObject : MonoBehaviour
 {
     //声明刚体组件
     public EscQuit pause;
-    private float speed = 0.1f;
+    // 注意speed变量要填一秒移动距离，一格30单位
+    public float speed = 0.1f;
     private bool isOnFloor = true;
     public GameObject upperFloor;
     public GameObject lowerFloor;
@@ -23,7 +24,7 @@ public class UpperObject : MonoBehaviour
     {
         if (!pause.isPause)
         {
-            transform.Translate(Vector2.right * speed);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
             if (Input.GetMouseButtonDown(0) && isOnFloor)
             {

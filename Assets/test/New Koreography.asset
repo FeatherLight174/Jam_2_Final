@@ -23,7 +23,7 @@ MonoBehaviour:
     beatsPerMeasure: 4
     bStartNewMeasure: 1
   - sectionName: New Section
-    startSample: 70666
+    startSample: 77350
     samplesPerBeat: 17640
     beatsPerMeasure: 4
     bStartNewMeasure: 1
