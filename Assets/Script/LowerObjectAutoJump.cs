@@ -24,6 +24,15 @@ public class LowerObjectAutoJump : MonoBehaviour
 
     void AutoJump(KoreographyEvent koreographyEvent)
     {
-        rigidbody.AddForce(Vector2.up * force);
+        if((int)koreographyEvent.GetIntValue() == 0)
+        {
+            rigidbody.AddForce(Vector2.up * force);
+        }
+        if((int)koreographyEvent.GetIntValue() == 2)
+        {
+            rigidbody.gravityScale = -rigidbody.gravityScale;
+            force = -force;
+        }
     }
+    
 }
