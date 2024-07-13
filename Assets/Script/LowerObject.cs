@@ -13,7 +13,7 @@ public class Control : MonoBehaviour
     public GameObject upperFloor;
     public GameObject lowerFloor;
     Rigidbody2D rigidbody;
-    public float force;
+    public float jumpSpeed;
 
 
 
@@ -30,7 +30,7 @@ public class Control : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
-            if (Input.GetMouseButtonDown(1) && isOnFloor)
+            if (Input.GetMouseButtonDown(1))
             {
                 Jump();
                 isOnFloor = false;
@@ -38,7 +38,7 @@ public class Control : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 rigidbody.gravityScale = -rigidbody.gravityScale;
-                force = -force;
+                jumpSpeed = -jumpSpeed;
                 isOnFloor = false;
             }
         }
@@ -62,7 +62,7 @@ public class Control : MonoBehaviour
     void Jump()
     {
         //对物体施加方向向上的力，也可以对rigidbody.velocity进行操作，但是不推荐
-        rigidbody.AddForce(Vector2.up * force);
+        rigidbody.velocity = new Vector2(0, jumpSpeed);
     }
 
     
