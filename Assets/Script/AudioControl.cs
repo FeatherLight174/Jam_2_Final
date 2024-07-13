@@ -26,7 +26,6 @@ public class AudioControl : MonoBehaviour
         }
         if (player.isPlaying)
         {
-            Debug.Log(11111);
         }
     }
 }
