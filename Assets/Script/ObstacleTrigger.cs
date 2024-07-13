@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FloorTrigger : MonoBehaviour
+public class ObstacleTrigger : MonoBehaviour
 {
     public GameObject blueObject;
     public GameObject redObject;
-    public GameObject blueFloor;
-    public GameObject redFloor;
+    public GameObject blueObstacle;
+    public GameObject redObstacle;
+    public GameObject greenObstacle;
     public MissTime missTime;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -21,10 +21,9 @@ public class FloorTrigger : MonoBehaviour
     {
         
     }
-
-    void OnColliderEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
-        if(((other.gameObject == blueFloor)&&(gameObject == redObject))|| ((other.gameObject == redFloor) && (gameObject == blueObject)))
+        if (((other.gameObject == blueObstacle) && (gameObject == redObject)) || ((other.gameObject == redObstacle) && (gameObject == blueObject))||(other.gameObject == greenObstacle))
         {
             missTime.miss++;
         }
