@@ -5,6 +5,7 @@ using UnityEngine;
 public class InvisibleObject : MonoBehaviour
 {
     public GameObject invisibleObstacle;
+    public MissTime missTime;
     // Start is called before the first frame update
     void Start()
     {
