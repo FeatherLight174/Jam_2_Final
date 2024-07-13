@@ -22,11 +22,12 @@ public class FloorTrigger : MonoBehaviour
         
     }
 
-    void OnColliderEnter(Collider other)
-    {
+    void OnCollisionEnter2D(Collider2D other)
+    {   
         if(((other.gameObject == blueFloor)&&(gameObject == redObject))|| ((other.gameObject == redFloor) && (gameObject == blueObject)))
         {
             missTime.miss++;
+            Debug.Log(missTime.miss);
         }
 
     }

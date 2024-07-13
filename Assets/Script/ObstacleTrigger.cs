@@ -21,9 +21,9 @@ public class ObstacleTrigger : MonoBehaviour
     {
         
     }
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-        if (((other.gameObject == blueObstacle) && (gameObject == redObject)) || ((other.gameObject == redObstacle) && (gameObject == blueObject))||(other.gameObject == greenObstacle))
+        if ((other.gameObject == blueObstacle)|| (other.gameObject == redObstacle)||(other.gameObject == greenObstacle))
         {
             missTime.miss++;
         }

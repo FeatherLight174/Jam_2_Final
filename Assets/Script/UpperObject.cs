@@ -14,6 +14,7 @@ public class UpperObject : MonoBehaviour
     Rigidbody2D rigidbody;
     //力大小
     public float jumpSpeed;
+
     void Start()
     {
         //获取刚体组件
