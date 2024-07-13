@@ -13,7 +13,7 @@ public class UpperObject : MonoBehaviour
     public GameObject lowerFloor;
     Rigidbody2D rigidbody;
     //力大小
-    public float force;
+    public float jumpSpeed;
     void Start()
     {
         //获取刚体组件
@@ -26,7 +26,7 @@ public class UpperObject : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
-            if (Input.GetMouseButtonDown(0) && isOnFloor)
+            if (Input.GetMouseButtonDown(0))
             {
                 Jump();
                 isOnFloor = false;
@@ -34,7 +34,7 @@ public class UpperObject : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.Space))
             {
                 rigidbody.gravityScale = -rigidbody.gravityScale;
-                force = -force;
+                jumpSpeed = -jumpSpeed;
                 isOnFloor = false;
             }
         }
@@ -58,6 +58,6 @@ public class UpperObject : MonoBehaviour
     void Jump()
     {
         //对物体施加方向向上的力，也可以对rigidbody.velocity进行操作，但是不推荐
-        rigidbody.AddForce(Vector2.down * force);
+        rigidbody.velocity = new Vector2(0, jumpSpeed);
     }
 }

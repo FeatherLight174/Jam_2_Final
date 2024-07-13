@@ -2,11 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ObstacleTrigger : MonoBehaviour
+public class FloorTrigger : MonoBehaviour
 {
     public GameObject upperObject;
     public GameObject lowerObject;
-    public HeartPoint hp;
     // Start is called before the first frame update
     void Start()
     {

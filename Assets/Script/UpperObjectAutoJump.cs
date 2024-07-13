@@ -6,7 +6,7 @@ using SonicBloom.Koreo;
 public class UpperObjectAutoJump : MonoBehaviour
 {
     Rigidbody2D rigidbody;
-    public float force;
+    public float jumpSpeed;
     public EscQuit pause;
     public string eventID;
     // Start is called before the first frame update
@@ -25,17 +25,22 @@ public class UpperObjectAutoJump : MonoBehaviour
     {
         if ((int)koreographyEvent.GetIntValue() == 1)
         {
-            rigidbody.AddForce(Vector2.down * force);
+            rigidbody.velocity = new Vector2(0, jumpSpeed);
+
             print("1:");
             Debug.Log(gameObject.transform.position.x);
+
         }
         if ((int)koreographyEvent.GetIntValue() == 2)
         {
             rigidbody.gravityScale = -rigidbody.gravityScale;
-            force = -force;
+            jumpSpeed = -jumpSpeed;
+
+
             print("2:");
             Debug.Log(gameObject.transform.position.x);
         }
+
 
 
     }
