@@ -37,6 +37,7 @@ public class UpperObject : MonoBehaviour
                 rigidbody.gravityScale = -rigidbody.gravityScale;
                 jumpSpeed = -jumpSpeed;
                 isOnFloor = false;
+
             }
         }
 
