@@ -24,9 +24,6 @@ public class AudioControl : MonoBehaviour
         {
             player.UnPause();
         }
-        if (player.isPlaying)
-        {
-            Debug.Log(11111);
-        }
+
     }
 }
