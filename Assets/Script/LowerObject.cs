@@ -41,6 +41,10 @@ public class Control : MonoBehaviour
                 jumpSpeed = -jumpSpeed;
                 isOnFloor = false;
             }
+            if (isOnFloor)
+            {
+
+            }
         }
         
 
