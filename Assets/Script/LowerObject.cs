@@ -30,7 +30,7 @@ public class Control : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
-            if (Input.GetMouseButtonDown(1))
+            if (Input.GetKeyDown(KeyCode.J))
             {
                 Jump();
                 isOnFloor = false;
