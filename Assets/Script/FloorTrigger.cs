@@ -22,7 +22,7 @@ public class FloorTrigger : MonoBehaviour
     {
         if((other.gameObject == upperObject)||(other.gameObject == lowerObject))
         {
-            hp.heartPoint--;
+            // hp.heartPoint--;
         }
 
     }
