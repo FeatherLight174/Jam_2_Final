@@ -27,7 +27,7 @@ public class UpperObject : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
-            if (Input.GetKeyDown(KeyCode.J))
+            if (Input.GetKeyDown(KeyCode.F))
             {
                 Jump();
                 isOnFloor = false;
