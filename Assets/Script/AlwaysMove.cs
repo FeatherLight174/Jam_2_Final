@@ -5,7 +5,7 @@ using UnityEngine;
 public class AlwaysMove : MonoBehaviour
 {
     public EscQuit pause;
-    private float speed = 0.1f;
+    public float speed = 0.1f;
     // Start is called before the first frame update
     void Start()
     {

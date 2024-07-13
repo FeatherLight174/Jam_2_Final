@@ -8,7 +8,7 @@ public class Control : MonoBehaviour
     //声明刚体组件
     public EscQuit pause;
 
-    private float speed = 0.1f;
+    public float speed = 0.1f;
     private bool isOnFloor = true;
     public GameObject upperFloor;
     public GameObject lowerFloor;
@@ -28,7 +28,7 @@ public class Control : MonoBehaviour
     {
         if (!pause.isPause)
         {
-            transform.Translate(Vector2.right * speed);
+            transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
             if (Input.GetMouseButtonDown(1) && isOnFloor)
             {
