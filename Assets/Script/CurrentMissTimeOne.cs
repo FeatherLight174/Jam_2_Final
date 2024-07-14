@@ -78,3 +78,4 @@ public class CurrentMissTimeOne : MonoBehaviour
             nine.SetActive(true);
         }
     }
+}

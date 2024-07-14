@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class TutorialPauseTrigger : MonoBehaviour
 {
-    public GameObject pauseTrigger;
     public int FJSpace;
-    public string key;
+    public GameObject F;
+    public GameObject J;
+    public GameObject Space;
     private bool isPause = true;
+    public GameObject pauseTrigger;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,6 +31,21 @@ public class TutorialPauseTrigger : MonoBehaviour
         {
             isPause = false;
         }
+        if (isPause)
+        {
+            if(FJSpace == 0)
+            {
+                F.GetComponent<Animation>().Play();
+            }
+            if (FJSpace == 1)
+            {
+                J.GetComponent<Animation>().Play();
+            }
+            if (FJSpace == 2)
+            {
+                Space.GetComponent<Animation>().Play();
+            }
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
@@ -39,6 +56,7 @@ public class TutorialPauseTrigger : MonoBehaviour
             {
                 isPause = true;
                 Time.timeScale = 0.0f;
+
             }
         }
     }

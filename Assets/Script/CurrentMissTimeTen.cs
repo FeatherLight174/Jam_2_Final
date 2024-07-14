@@ -37,7 +37,7 @@ public class CurrentMissTimeTen : MonoBehaviour
         eight.SetActive(false);
         nine.SetActive(false);
         zero.SetActive(false);
-        hundred = (missTime.miss / 10)%10;
+        hundred = (missTime.miss / 10) % 10;
         if (hundred == 0)
         {
             zero.SetActive(true);
@@ -79,3 +79,4 @@ public class CurrentMissTimeTen : MonoBehaviour
             nine.SetActive(true);
         }
     }
+}
