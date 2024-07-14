@@ -15,6 +15,7 @@ public class test : MonoBehaviour
     public GameObject switchPoint;
     public GameObject player;
     private int num = 0;
+    SpriteRenderer sr;
     private float interval = 0.02f;
 
     // Start is called before the first frame update
@@ -109,10 +110,10 @@ public class test : MonoBehaviour
                 alpha4 += interval;
             }
         }
-        picture1.color = new Color(picture1.color.r, picture1.color.g, picture1.color.b, alpha);
-        picture2.color = new Color(picture2.color.r, picture2.color.g, picture2.color.b, alpha);
-        picture3.color = new Color(picture3.color.r, picture3.color.g, picture3.color.b, alpha);
-        picture4.color = new Color(picture4.color.r, picture4.color.g, picture4.color.b, alpha);
+        picture1.color = new Color(picture1.color.r, picture1.color.g, picture1.color.b, alpha1);
+        picture2.color = new Color(picture2.color.r, picture2.color.g, picture2.color.b, alpha2);
+        picture3.color = new Color(picture3.color.r, picture3.color.g, picture3.color.b, alpha3);
+        picture4.color = new Color(picture4.color.r, picture4.color.g, picture4.color.b, alpha4);
     }
 
     void OnTriggerEnter2D(Collider2D other)
