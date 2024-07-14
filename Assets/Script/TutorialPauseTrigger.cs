@@ -19,21 +19,21 @@ public class TutorialPauseTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.F))||FJSpace == 0)
+        if ((Input.GetKeyDown(KeyCode.F)) && FJSpace == 0)
         {
             isPause = false;
         }
-        if ((Input.GetKeyDown(KeyCode.J)) || FJSpace == 1)
+        if ((Input.GetKeyDown(KeyCode.J)) && FJSpace == 1)
         {
             isPause = false;
         }
-        if ((Input.GetKeyDown(KeyCode.Space)) || FJSpace == 2)
+        if ((Input.GetKeyDown(KeyCode.Space)) && FJSpace == 2)
         {
             isPause = false;
         }
         if (isPause)
         {
-            if(FJSpace == 0)
+            if (FJSpace == 0)
             {
                 F.GetComponent<Animation>().Play();
             }
