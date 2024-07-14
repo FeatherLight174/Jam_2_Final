@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SceneSwitchLevel : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class SceneSwitchLevel : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other = trigger)
+        if(other == trigger)
         {
             SceneManager.LoadScene(level, LoadSceneMode.Single);
         }
