@@ -4589,7 +4589,6 @@ GameObject:
   - component: {fileID: 594070082}
   - component: {fileID: 594070081}
   - component: {fileID: 594070080}
-  - component: {fileID: 594070079}
   m_Layer: 0
   m_Name: PauseTriggerSpace
   m_TagString: Untagged
@@ -4612,23 +4611,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1256301991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &594070079
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 594070077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FJSpace: 2
-  F: {fileID: 713492150}
-  J: {fileID: 865710727}
-  Space: {fileID: 607656629}
-  pauseTrigger: {fileID: 594070077}
 --- !u!114 &594070080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5724,6 +5706,7 @@ GameObject:
   - component: {fileID: 881195508}
   - component: {fileID: 881195511}
   - component: {fileID: 881195512}
+  - component: {fileID: 881195513}
   m_Layer: 7
   m_Name: RedPlayer
   m_TagString: Untagged
@@ -6045,6 +6028,23 @@ MonoBehaviour:
   redObstacle: {fileID: 88319352}
   greenObstacle: {fileID: 1437005668}
   missTime: {fileID: 921803390}
+--- !u!114 &881195513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881195502}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FJSpace: 1
+  F: {fileID: 713492150}
+  J: {fileID: 865710727}
+  Space: {fileID: 607656629}
+  pauseTrigger: {fileID: 1190419049}
 --- !u!1 &921803389
 GameObject:
   m_ObjectHideFlags: 0
@@ -6982,7 +6982,6 @@ GameObject:
   - component: {fileID: 1190419054}
   - component: {fileID: 1190419053}
   - component: {fileID: 1190419052}
-  - component: {fileID: 1190419051}
   m_Layer: 0
   m_Name: PauseTriggerJ
   m_TagString: Untagged
@@ -7005,23 +7004,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1256301991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1190419051
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1190419049}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FJSpace: 1
-  F: {fileID: 713492150}
-  J: {fileID: 865710727}
-  Space: {fileID: 607656629}
-  pauseTrigger: {fileID: 1190419049}
 --- !u!114 &1190419052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18462,7 +18444,9 @@ GameObject:
   - component: {fileID: 2069937687}
   - component: {fileID: 2069937682}
   - component: {fileID: 2069937686}
+  - component: {fileID: 2069937690}
   - component: {fileID: 2069937688}
+  - component: {fileID: 2069937689}
   m_Layer: 6
   m_Name: BluePlayer
   m_TagString: Untagged
@@ -18754,6 +18738,40 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upDownSwitch: {fileID: 1718677518}
   background: {fileID: 1864247300}
+--- !u!114 &2069937689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069937675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FJSpace: 2
+  F: {fileID: 713492150}
+  J: {fileID: 865710727}
+  Space: {fileID: 607656629}
+  pauseTrigger: {fileID: 594070077}
+--- !u!114 &2069937690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2069937675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FJSpace: 0
+  F: {fileID: 713492150}
+  J: {fileID: 865710727}
+  Space: {fileID: 607656629}
+  pauseTrigger: {fileID: 2126785537}
 --- !u!1 &2126785537
 GameObject:
   m_ObjectHideFlags: 0
@@ -18767,7 +18785,6 @@ GameObject:
   - component: {fileID: 2126785542}
   - component: {fileID: 2126785541}
   - component: {fileID: 2126785540}
-  - component: {fileID: 2126785539}
   m_Layer: 0
   m_Name: PauseTriggerF
   m_TagString: Untagged
@@ -18790,23 +18807,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1256301991}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2126785539
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2126785537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  FJSpace: 0
-  F: {fileID: 713492150}
-  J: {fileID: 865710727}
-  Space: {fileID: 607656629}
-  pauseTrigger: {fileID: 2126785537}
 --- !u!114 &2126785540
 MonoBehaviour:
   m_ObjectHideFlags: 0
