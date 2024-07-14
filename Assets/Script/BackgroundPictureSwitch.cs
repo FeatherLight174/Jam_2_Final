@@ -9,7 +9,6 @@ public class BackgroundPictureSwitch : MonoBehaviour
     public GameObject picture3;
     public GameObject picture4;
     public GameObject switchPoint;
-    public GameObject player;
     private int num = 0;
     // Start is called before the first frame update
     void Start()
@@ -21,10 +20,6 @@ public class BackgroundPictureSwitch : MonoBehaviour
     void Update()
     {
 
-        /*if(num == 1)
-        {
-            while()
-        }*/
     }
 
     void OnTriggerEnter2D(Collider2D other)
