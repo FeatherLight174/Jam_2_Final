@@ -14,17 +14,47 @@ public class BackgroundPictureSwitch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        picture1.SetActive(true); 
+        picture2.SetActive(false);
+        picture3.SetActive(false);
+        picture4.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        /*if(num == 1)
+        picture1.SetActive(false);
+        picture2.SetActive(false);
+        picture3.SetActive(false);
+        picture4.SetActive(false);
+        if (num == 0)
         {
-            while()
-        }*/
+            picture1.SetActive(true);
+            picture2.SetActive(false);
+            picture3.SetActive(false);
+            picture4.SetActive(false);
+        }
+        if (num == 1)
+        {
+            picture1.SetActive(false);
+            picture2.SetActive(true);
+            picture3.SetActive(false);
+            picture4.SetActive(false);
+        }
+        if (num == 2)
+        {
+            picture1.SetActive(false);
+            picture2.SetActive(false);
+            picture3.SetActive(true);
+            picture4.SetActive(false);
+        }
+        if (num == 3)
+        {
+            picture1.SetActive(false);
+            picture2.SetActive(false);
+            picture3.SetActive(false);
+            picture4.SetActive(true);
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
