@@ -30,7 +30,6 @@ public class PauseTriggerSpace : MonoBehaviour
                 blue.jumpSpeed = -blue.jumpSpeed;
                 red.jumpSpeed = -red.jumpSpeed;*/
             }
-            Space.GetComponent<Animation>().Play();
         }
         if (!pause.isPause)
         {

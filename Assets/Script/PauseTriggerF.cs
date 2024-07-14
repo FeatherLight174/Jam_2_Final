@@ -27,7 +27,6 @@ public class PauseTriggerF : MonoBehaviour
                 pause.isPause = false;
                 bluePlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, blue.jumpSpeed);
             }
-            F.GetComponent<Animation>().Play();
         }
         if (!pause.isPause)
         {

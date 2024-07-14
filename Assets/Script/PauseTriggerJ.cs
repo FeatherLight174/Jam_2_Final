@@ -28,7 +28,6 @@ public class PauseTriggerJ : MonoBehaviour
                 pause.isPause = false;
                 redPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, red.jumpSpeed);
             }
-            J.GetComponent<Animation>().Play();
         }
         if (!pause.isPause)
         {
