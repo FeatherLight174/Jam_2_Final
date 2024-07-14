@@ -62,4 +62,10 @@ public class UpperObject : MonoBehaviour
         //对物体施加方向向上的力，也可以对rigidbody.velocity进行操作，但是不推荐
         rigidbody.velocity = new Vector2(0, jumpSpeed);
     }
+
+    public void Reverse()
+    {
+        rigidbody.gravityScale = -rigidbody.gravityScale;
+        jumpSpeed = -jumpSpeed;
+    }
 }

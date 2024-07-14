@@ -8,9 +8,11 @@ public class TutorialPauseTrigger : MonoBehaviour
     public GameObject F;
     public GameObject J;
     public GameObject Space;
-    private bool isPause = false;
+    public EscQuit pause;
     public GameObject redPlayer;
     public GameObject bluePlayer;
+    public LowerObject red;
+    public UpperObject blue;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,17 +24,25 @@ public class TutorialPauseTrigger : MonoBehaviour
     {
         if ((Input.GetKeyDown(KeyCode.F)) && (FJSpace == 0))
         {
-            isPause = false;
+            pause.isPause = false;
+            bluePlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, blue.jumpSpeed);
+
         }
         if ((Input.GetKeyDown(KeyCode.J)) && (FJSpace == 1))
         {
-            isPause = false;
+            pause.isPause = false;
+            redPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, red.jumpSpeed);
         }
         if ((Input.GetKeyDown(KeyCode.Space)) && (FJSpace == 2))
         {
-            isPause = false;
+            pause.isPause = false;
+            bluePlayer.GetComponent<Rigidbody2D>().gravityScale = -bluePlayer.GetComponent<Rigidbody2D>().gravityScale;
+            redPlayer.GetComponent<Rigidbody2D>().gravityScale = -redPlayer.GetComponent<Rigidbody2D>().gravityScale;
+            blue.jumpSpeed = -blue.jumpSpeed;
+            red.jumpSpeed = -red.jumpSpeed;
+
         }
-        if (isPause)
+        if (pause.isPause)
         {
             if (FJSpace == 0)
             {
@@ -41,13 +51,14 @@ public class TutorialPauseTrigger : MonoBehaviour
             if (FJSpace == 1)
             {
                 J.GetComponent<Animation>().Play();
+                
             }
             if (FJSpace == 2)
             {
                 Space.GetComponent<Animation>().Play();
             }
         }
-        if (!isPause)
+        if (!pause.isPause)
         {
             Time.timeScale = 1.0f;
         }
@@ -61,10 +72,11 @@ public class TutorialPauseTrigger : MonoBehaviour
     {
         if((other.gameObject == redPlayer)|| (other.gameObject == bluePlayer))
         {
-            Debug.Log(1);
-            if (!isPause)
+
+            if (!pause.isPause)
             {
-                isPause = true;
+
+                pause.isPause = true;
                 Time.timeScale = 0.0f;
 
             }

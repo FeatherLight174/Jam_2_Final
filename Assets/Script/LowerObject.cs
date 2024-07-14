@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Control : MonoBehaviour
+public class LowerObject : MonoBehaviour
 {
     //声明刚体组件
     public EscQuit pause;
@@ -69,5 +69,10 @@ public class Control : MonoBehaviour
         rigidbody.velocity = new Vector2(0, jumpSpeed);
     }
 
+    public void Reverse()
+    {
+        rigidbody.gravityScale = -rigidbody.gravityScale;
+        jumpSpeed = -jumpSpeed;
+    }
     
 }
