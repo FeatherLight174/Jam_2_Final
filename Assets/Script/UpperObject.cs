@@ -27,6 +27,7 @@ public class UpperObject : MonoBehaviour
         {
             transform.Translate(Vector2.right * speed * Time.deltaTime);
             //
+            
             if (Input.GetKeyDown(KeyCode.F))
             {
                 Jump();
@@ -34,9 +35,15 @@ public class UpperObject : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.Space))
             {
+                Debug.Log(rigidbody.gravityScale);
+                Debug.Log(-rigidbody.gravityScale);
                 rigidbody.gravityScale = -rigidbody.gravityScale;
+
                 jumpSpeed = -jumpSpeed;
+                Debug.Log(rigidbody.gravityScale);
+                Debug.Log(-rigidbody.gravityScale);
                 isOnFloor = false;
+
 
             }
         }
@@ -63,9 +70,5 @@ public class UpperObject : MonoBehaviour
         rigidbody.velocity = new Vector2(0, jumpSpeed);
     }
 
-    public void Reverse()
-    {
-        rigidbody.gravityScale = -rigidbody.gravityScale;
-        jumpSpeed = -jumpSpeed;
-    }
+
 }
