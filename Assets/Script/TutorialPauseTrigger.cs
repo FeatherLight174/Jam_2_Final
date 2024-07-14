@@ -8,26 +8,27 @@ public class TutorialPauseTrigger : MonoBehaviour
     public GameObject F;
     public GameObject J;
     public GameObject Space;
-    private bool isPause = true;
-    public GameObject pauseTrigger;
+    private bool isPause = false;
+    public GameObject redPlayer;
+    public GameObject bluePlayer;
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.F)) && FJSpace == 0)
+        if ((Input.GetKeyDown(KeyCode.F)) && (FJSpace == 0))
         {
             isPause = false;
         }
-        if ((Input.GetKeyDown(KeyCode.J)) && FJSpace == 1)
+        if ((Input.GetKeyDown(KeyCode.J)) && (FJSpace == 1))
         {
             isPause = false;
         }
-        if ((Input.GetKeyDown(KeyCode.Space)) && FJSpace == 2)
+        if ((Input.GetKeyDown(KeyCode.Space)) && (FJSpace == 2))
         {
             isPause = false;
         }
@@ -46,12 +47,21 @@ public class TutorialPauseTrigger : MonoBehaviour
                 Space.GetComponent<Animation>().Play();
             }
         }
+        if (!isPause)
+        {
+            Time.timeScale = 1.0f;
+        }
+        else
+        {
+            Time.timeScale = 0.0f;
+        }
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other == pauseTrigger)
+        if((other.gameObject == redPlayer)|| (other.gameObject == bluePlayer))
         {
+            Debug.Log(1);
             if (!isPause)
             {
                 isPause = true;

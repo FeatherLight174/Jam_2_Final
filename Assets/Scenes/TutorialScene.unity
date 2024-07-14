@@ -4619,7 +4619,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 594070077}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
   m_Name: 
@@ -4628,7 +4628,8 @@ MonoBehaviour:
   F: {fileID: 713492150}
   J: {fileID: 865710727}
   Space: {fileID: 607656629}
-  pauseTrigger: {fileID: 594070077}
+  redPlayer: {fileID: 881195502}
+  bluePlayer: {fileID: 2069937675}
 --- !u!114 &594070080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7012,7 +7013,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1190419049}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
   m_Name: 
@@ -7021,7 +7022,8 @@ MonoBehaviour:
   F: {fileID: 713492150}
   J: {fileID: 865710727}
   Space: {fileID: 607656629}
-  pauseTrigger: {fileID: 1190419049}
+  redPlayer: {fileID: 881195502}
+  bluePlayer: {fileID: 2069937675}
 --- !u!114 &1190419052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18797,7 +18799,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2126785537}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a25eafbc1ebb17641b9294a55ca697af, type: 3}
   m_Name: 
@@ -18806,7 +18808,8 @@ MonoBehaviour:
   F: {fileID: 713492150}
   J: {fileID: 865710727}
   Space: {fileID: 607656629}
-  pauseTrigger: {fileID: 2126785537}
+  redPlayer: {fileID: 881195502}
+  bluePlayer: {fileID: 2069937675}
 --- !u!114 &2126785540
 MonoBehaviour:
   m_ObjectHideFlags: 0
