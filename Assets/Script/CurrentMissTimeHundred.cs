@@ -21,24 +21,33 @@ public class CurrentMissTimeHundred : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        zero.SetActive(true);  
+        zero.SetActive(true);
+        one.SetActive(false);
+        two.SetActive(false);
+        three.SetActive(false);
+        four.SetActive(false);
+        five.SetActive(false);
+        six.SetActive(false);
+        seven.SetActive(false);
+        eight.SetActive(false);
+        nine.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
-    {   
+    {
         one.SetActive(false);
-        two.SetActive(false); 
-        three.SetActive(false); 
-        four.SetActive(false); 
-        five.SetActive(false); 
+        two.SetActive(false);
+        three.SetActive(false);
+        four.SetActive(false);
+        five.SetActive(false);
         six.SetActive(false);
         seven.SetActive(false);
         eight.SetActive(false);
         nine.SetActive(false);
         zero.SetActive(false);
         hundred = missTime.miss / 100;
-        if(hundred == 0)
+        if (hundred == 0)
         {
             zero.SetActive(true);
         }
