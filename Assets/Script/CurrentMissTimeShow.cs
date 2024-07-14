@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CurrentMissTimeOne : MonoBehaviour
+public class CurrentMissTimeHundred : MonoBehaviour
 {
     public MissTime missTime;
     public GameObject one;
@@ -34,19 +35,19 @@ public class CurrentMissTimeOne : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {   
         one.SetActive(false);
-        two.SetActive(false);
-        three.SetActive(false);
-        four.SetActive(false);
-        five.SetActive(false);
+        two.SetActive(false); 
+        three.SetActive(false); 
+        four.SetActive(false); 
+        five.SetActive(false); 
         six.SetActive(false);
         seven.SetActive(false);
         eight.SetActive(false);
         nine.SetActive(false);
         zero.SetActive(false);
-        hundred = missTime.miss % 10;
-        if (hundred == 0)
+        hundred = missTime.miss / 100;
+        if(hundred == 0)
         {
             zero.SetActive(true);
         }

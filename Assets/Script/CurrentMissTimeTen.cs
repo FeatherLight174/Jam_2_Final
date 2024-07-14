@@ -22,6 +22,15 @@ public class CurrentMissTimeTen : MonoBehaviour
     void Start()
     {
         zero.SetActive(true);
+        one.SetActive(false);
+        two.SetActive(false);
+        three.SetActive(false);
+        four.SetActive(false);
+        five.SetActive(false);
+        six.SetActive(false);
+        seven.SetActive(false);
+        eight.SetActive(false);
+        nine.SetActive(false);
     }
 
     // Update is called once per frame
