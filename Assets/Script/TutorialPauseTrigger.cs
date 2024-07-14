@@ -22,28 +22,30 @@ public class TutorialPauseTrigger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.F)) && (FJSpace == 0))
-        {
-            pause.isPause = false;
-            bluePlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, blue.jumpSpeed);
 
-        }
-        if ((Input.GetKeyDown(KeyCode.J)) && (FJSpace == 1))
-        {
-            pause.isPause = false;
-            redPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, red.jumpSpeed);
-        }
-        if ((Input.GetKeyDown(KeyCode.Space)) && (FJSpace == 2))
-        {
-            pause.isPause = false;
-            bluePlayer.GetComponent<Rigidbody2D>().gravityScale = -bluePlayer.GetComponent<Rigidbody2D>().gravityScale;
-            redPlayer.GetComponent<Rigidbody2D>().gravityScale = -redPlayer.GetComponent<Rigidbody2D>().gravityScale;
-            blue.jumpSpeed = -blue.jumpSpeed;
-            red.jumpSpeed = -red.jumpSpeed;
-
-        }
+        
         if (pause.isPause)
         {
+            if ((Input.GetKeyDown(KeyCode.F)) && (FJSpace == 0))
+            {
+                pause.isPause = false;
+                bluePlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, blue.jumpSpeed);
+
+            }
+            else if ((Input.GetKeyDown(KeyCode.J)) && (FJSpace == 1))
+            {
+                pause.isPause = false;
+                redPlayer.GetComponent<Rigidbody2D>().velocity = new Vector2(0, red.jumpSpeed);
+            }
+            else if ((Input.GetKeyDown(KeyCode.Space)) && (FJSpace == 2))
+            {
+                pause.isPause = false;
+                bluePlayer.GetComponent<Rigidbody2D>().gravityScale = -bluePlayer.GetComponent<Rigidbody2D>().gravityScale;
+                redPlayer.GetComponent<Rigidbody2D>().gravityScale = -redPlayer.GetComponent<Rigidbody2D>().gravityScale;
+                blue.jumpSpeed = -blue.jumpSpeed;
+                red.jumpSpeed = -red.jumpSpeed;
+
+            }
             if (FJSpace == 0)
             {
                 F.GetComponent<Animation>().Play();
